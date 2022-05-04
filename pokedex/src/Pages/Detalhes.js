@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { goToDetalhes, goToHomePage, goToPokedex } from "../Coordinator/Coordinator"
-import { useNavigate } from "react-router-dom";
-import { BASE_URL } from "../Contants/contants";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import styled from "styled-components";
+import { useEffect, useState, useNavigate } from "react";
 import axios from "axios";
+import { goToDetalhes, goToPokedex, goToHomePage } from "../Coordinator/Coordinator"
+import { BASE_URL } from "../Contants/contants";
+
 
 export const Detalhes = () => {
     const navigate = useNavigate()
+
 
     const [detalhePokemon, setDetalhePokemon] = useState({})
 
@@ -26,11 +30,10 @@ export const Detalhes = () => {
     })
 
 
-
-
     return (
         <div>
             <h1>Detalhes do Pokemon</h1>
+
             <button onClick={() => goToPokedex(navigate)}>Ir a Pokédex</button>
             <p>{detalhePokemon.name}</p>
             <button onClick={() => goToHomePage(navigate)}>Voltar</button>
@@ -57,15 +60,9 @@ export const Detalhes = () => {
             {detalhePokemon.types && <p>{detalhePokemon.types[1].type.name}</p>}
             {detalhePokemon.types && <p>{detalhePokemon.moves[0].move.name}</p>}
             {detalhePokemon.types && <p>{detalhePokemon.moves[1].move.name}</p>}
-            {detalhePokemon.types && <p>{detalhePokemon.moves[2].move.name}</p>}
-           
+            {detalhePokemon.types && <p>{detalhePokemon.moves[2].move.name}</p>}  
 
-          
-            
-
-
-
-
+     
         </div>
 
     );
