@@ -1,5 +1,4 @@
 import React from "react";
-
 import { goToDetalhes, goToPokedex } from "../Coordinator/Coordinator";
 import { useNavigate } from "react-router-dom";
 import { ContextPokemons } from "../global/GlobalContext";
@@ -18,9 +17,7 @@ export const Pokedex = () => {
 
 
 /* const apagar =(id)=>{
-
     if(){
-
 }
 } */
 
@@ -35,23 +32,23 @@ export const Pokedex = () => {
   //         console.log(err)
   //     })
 
-  return (
-    <div>
-      <h1>Seus Pokemons</h1>
+//   return (
+//     <div>
+//       <h1>Seus Pokemons</h1>
 
-      <ul>
-        {pokedex.map((pokemon) => {
+//       <ul>
+//         {pokedex.map((pokemon) => {
             
-          return<div>
+//           return<div>
               
           
-          </div> 
-        })}
-      </ul>
-      <button onClick={()=>goToDetalhes(navigate)}>Detalhes</button>
-     <button onClick={""}>Excluir pokemon</button>
-    </div>
-  );
-};
-
+//           </div> 
+//         })}
+//       </ul>
+//       <button onClick={()=>goToDetalhes(navigate)}>Detalhes</button>
+//      <button onClick={""}>Excluir pokemon</button>
+//     </div>
+//   );
+// };
+}
 export default Pokedex;

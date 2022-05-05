@@ -11,7 +11,7 @@ function App() {
     <div>
     
       <GlobalState>
-        <Headers/>
+       
         <Router />
       </GlobalState>
 
