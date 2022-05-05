@@ -15,14 +15,14 @@ export const Pokedex = () => {
 
   const navigate = useNavigate();
 
-    return (
-        <div>
-            <h1>Seus Pokemons</h1>    
-               
-         
-        </div>
-    );
+
+
+/* const apagar =(id)=>{
+
+    if(){
+
 }
+} */
 
 
   // const url = "https://pokeapi.co/api/v2/pokemon/"
@@ -43,11 +43,13 @@ export const Pokedex = () => {
         {pokedex.map((pokemon) => {
             
           return<div>
-              <img src = {pokemon.sprites.other.dream_world.front_default}></img>
+              
           
           </div> 
         })}
       </ul>
+      <button onClick={()=>goToDetalhes(navigate)}>Detalhes</button>
+     <button onClick={""}>Excluir pokemon</button>
     </div>
   );
 };
