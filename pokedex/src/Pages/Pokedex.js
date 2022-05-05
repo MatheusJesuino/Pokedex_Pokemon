@@ -1,4 +1,5 @@
 import React from "react";
+
 import { goToDetalhes, goToPokedex } from "../Coordinator/Coordinator";
 import { useNavigate } from "react-router-dom";
 import { ContextPokemons } from "../global/GlobalContext";
@@ -6,10 +7,14 @@ import axios from "axios";
 import { useState } from "react";
 import { useContext } from "react";
 
+
+
 export const Pokedex = () => {
   const { pokemons, pokedex } = useContext(ContextPokemons);
 
+
   const navigate = useNavigate();
+
 
 
 /* const apagar =(id)=>{
@@ -18,6 +23,7 @@ export const Pokedex = () => {
 
 }
 } */
+
 
   // const url = "https://pokeapi.co/api/v2/pokemon/"
   //     axios

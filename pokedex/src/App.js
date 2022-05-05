@@ -14,7 +14,7 @@ function App() {
         <Headers/>
         <Router />
       </GlobalState>
-      
+
     </div>
     
   );
