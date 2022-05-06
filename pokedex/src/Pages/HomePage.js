@@ -8,11 +8,12 @@ import styled from "styled-components";
 import { ContextPokemons } from "../global/GlobalContext";
 import { Pokedex } from "./Pokedex";
 import { Badge, Box, Button, ButtonGroup, Flex, Image } from "@chakra-ui/react";
+import { Headers } from "./Headers";
 
 const CardPokemons = styled.div`
   Img {
     height: 150px;
-    widht: 150px;
+    width: 150px;
   }
 `;
 export const HomePage = () => {
@@ -30,6 +31,7 @@ export const HomePage = () => {
 
   return (
     <div>
+       
       <h1>Lista Pokemons</h1>
       <button onClick={() => goToPokedex(navigate)}>Ir a Pokédex</button>
       <Flex justify={"space-around"} direction={"row"} wrap={"wrap"}>
@@ -63,7 +65,7 @@ export const HomePage = () => {
                   <Button
                     colorScheme={"teal"}
                     size="sm"
-                    onClick={() => goToDetalhes(navigate)}
+                    onClick={() => goToDetalhes(navigate, pokemon.name)}
                   >
                     Ver Detalhes
                   </Button>
