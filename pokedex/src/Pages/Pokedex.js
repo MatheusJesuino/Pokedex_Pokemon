@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   goToDetalhes,
   goToPokedex,
@@ -18,6 +17,7 @@ export const Pokedex = () => {
 
   const navigate = useNavigate();
 
+
   const onClickApagar = (id) => {
     const index = pokedex.findIndex((pokemon) => pokemon.id === id);
     const pokemon = pokedex[index];
@@ -26,9 +26,9 @@ export const Pokedex = () => {
     setPokemons((list) => [pokemon, ...list]);
   };
 
-  return (
-    <div>
-      <h1>Seus Pokemons</h1>
+//   return (
+//     <div>
+//       <h1>Seus Pokemons</h1>
 
       <ul>
         {pokedex.map((pokemon) => {

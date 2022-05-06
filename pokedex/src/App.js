@@ -23,6 +23,7 @@ function App() {
       <ChakraProvider theme={theme} resetCSS={false} >
       
         <Headers/>
+
         <Router />
         </ChakraProvider>
       </GlobalState>
