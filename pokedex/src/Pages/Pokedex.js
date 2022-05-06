@@ -8,6 +8,15 @@ import { ContextPokemons } from "../global/GlobalContext";
 import { useState } from "react";
 import { useContext } from "react";
 import { Box, Button, ButtonGroup, Flex, Image } from "@chakra-ui/react";
+import styled from "styled-components";
+
+const Container = styled.div `
+h1{
+  text-align: center;
+  color:#D69E2E;
+  
+}
+`
 
 export const Pokedex = () => {
   const { pokemons, pokedex, setPokedex, setPokemons } =
@@ -24,10 +33,11 @@ export const Pokedex = () => {
   };
 
   return (
-    <div>
+    <Container>
       <h1>Seus Pokemons</h1>
 
       <Button
+      margin={'5'}
         colorScheme="blue"
         variant={"outline"}
         size="sm"
@@ -37,7 +47,7 @@ export const Pokedex = () => {
         {pokedex.map((pokemon) => {
           return (
             <Box
-              bg={"teal"}
+              bg={"#EBF8FF"}
               key={pokemon.id}
               maxW="sm"
               borderWidth="1px"
@@ -77,7 +87,7 @@ export const Pokedex = () => {
           );
         })}
       </Flex>
-    </div>
+    </Container>
   );
 };
 

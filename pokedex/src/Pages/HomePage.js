@@ -9,15 +9,18 @@ import { ContextPokemons } from "../global/GlobalContext";
 import { Pokedex } from "./Pokedex";
 import { Badge, Box, Button, ButtonGroup, Flex, Image } from "@chakra-ui/react";
 
-const CardPokemons = styled.div`
-  Img {
-    height: 150px;
-    widht: 150px;
-  }
-`;
+const Container = styled.div `
+h1{
+  text-align: center;
+  color:#D69E2E;
+  
+}
+`
+
+
 export const HomePage = () => {
   const navigate = useNavigate();
-  const { pokemons, pokedex, setPokemons, setPokedex } =
+  const { pokemons, pokedex, setPokemons, setPokedex, loading } =
     useContext(ContextPokemons);
 
   const onClickAddPokedex = (id) => {
@@ -29,54 +32,61 @@ export const HomePage = () => {
   };
 
   return (
-    <div>
+    <Container>
       <h1>Lista Pokemons</h1>
       <ButtonGroup>
-      <Button colorScheme={'blue'} onClick={() => goToPokedex(navigate)}>Ir a Pokédex</Button>
+        <Button margin={'5'} colorScheme={"blue"} onClick={() => goToPokedex(navigate)}>
+          Ir a Pokédex
+        </Button>
       </ButtonGroup>
-      <Flex justify={"space-around"} direction={"row"} wrap={"wrap"}>
-        {pokemons.map((pokemon) => {
-          return (
-            <Box
-              bg={"#EBF8FF"}
-              key={pokemon.id}
-              maxW="sm"
-              borderWidth="1px"
-              borderRadius="lg"
-              margin={"5px"}
-            >
-              <Box>
-                <Image
-                  boxSize={"150px"}
-                  src={pokemon.sprites.other.dream_world.front_default}
-                />
-              </Box>
+      {loading ? (
+        <Flex justify={'center'} align={'center'}>
+            <h1>Carregando...</h1>
+        </Flex>
+      ) : (
+        <Flex justify={"space-around"} direction={"row"} wrap={"wrap"}>
+          {pokemons.map((pokemon) => {
+            return (
+              <Box
+                bg={"#EBF8FF"}
+                key={pokemon.id}
+                maxW="sm"
+                borderWidth="1px"
+                borderRadius="lg"
+                margin={"5px"}
+              >
+                <Box>
+                  <Image
+                    boxSize={"150px"}
+                    src={pokemon.sprites.other.dream_world.front_default}
+                  />
+                </Box>
 
-              {pokemon.name}
-              <Flex>
-                <ButtonGroup>
-                  <Button
-                    colorScheme={"blue"}
-                    size="sm"
-                    onClick={() => onClickAddPokedex(pokemon.id)}
-                  >
-                    Adicionar a Pokédex
-                  </Button>
-                  <Button
-                    colorScheme={"teal"}
-                    size="sm"
-                    onClick={() => goToDetalhes(navigate, pokemon.name)}
-                  >
-                    Ver Detalhes
-                  </Button>
-                </ButtonGroup>
-              </Flex>
-            </Box>
-          );
-        })}
-      </Flex>
-    </div>
+                {pokemon.name}
+                <Flex>
+                  <ButtonGroup>
+                    <Button
+                      colorScheme={"blue"}
+                      size="sm"
+                      onClick={() => onClickAddPokedex(pokemon.id)}
+                    >
+                      Adicionar a Pokédex
+                    </Button>
+                    <Button
+                      colorScheme={"teal"}
+                      size="sm"
+                      onClick={() => goToDetalhes(navigate, pokemon.name)}
+                    >
+                      Ver Detalhes
+                    </Button>
+                  </ButtonGroup>
+                </Flex>
+              </Box>
+            );
+          })}
+        </Flex>
+      )}
+    </Container>
   );
 };
 export default HomePage;
-
