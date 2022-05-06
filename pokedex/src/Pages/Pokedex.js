@@ -57,22 +57,16 @@ export const Pokedex = () => {
                 <ButtonGroup>
                   <Button
                     colorScheme="blue"
-<<<<<<< HEAD
+
                     onClick={() => goToDetalhes(navigate,pokemon.name)}
-=======
-                    size="sm"
-                    onClick={() => goToDetalhes(navigate)}
->>>>>>> master
+
                   >
                     Detalhes
                   </Button>
                   <Button
                     colorScheme="blue"
-<<<<<<< HEAD
                     variant="outline"
-=======
                     size="sm"
->>>>>>> master
                     onClick={() => onClickApagar(pokemon.id)}
                   >
                     Excluir pokemon
