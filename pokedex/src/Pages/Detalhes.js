@@ -2,11 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"
 import axios from "axios";
 import { goToPokedex, goToHomePage } from "../Coordinator/Coordinator"
 import { BASE_URL } from "../Contants/contants";
-
+import { useNavigate } from "react-router-dom";
 
 
 const ContainerHeader = styled.div`
