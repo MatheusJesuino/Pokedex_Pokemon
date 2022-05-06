@@ -31,12 +31,14 @@ export const HomePage = () => {
   return (
     <div>
       <h1>Lista Pokemons</h1>
-      <button onClick={() => goToPokedex(navigate)}>Ir a Pokédex</button>
+      <ButtonGroup>
+      <Button colorScheme={'blue'} onClick={() => goToPokedex(navigate)}>Ir a Pokédex</Button>
+      </ButtonGroup>
       <Flex justify={"space-around"} direction={"row"} wrap={"wrap"}>
         {pokemons.map((pokemon) => {
           return (
             <Box
-              bg={"teal"}
+              bg={"#EBF8FF"}
               key={pokemon.id}
               maxW="sm"
               borderWidth="1px"
@@ -63,7 +65,7 @@ export const HomePage = () => {
                   <Button
                     colorScheme={"teal"}
                     size="sm"
-                    onClick={() => goToDetalhes(navigate)}
+                    onClick={() => goToDetalhes(navigate, pokemon.name)}
                   >
                     Ver Detalhes
                   </Button>

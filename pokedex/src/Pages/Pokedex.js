@@ -6,7 +6,6 @@ import {
 } from "../Coordinator/Coordinator";
 import { useNavigate } from "react-router-dom";
 import { ContextPokemons } from "../global/GlobalContext";
-import axios from "axios";
 import { useState } from "react";
 import { useContext } from "react";
 import { ButtonGroup, Button, Stack } from "@chakra-ui/react";
@@ -17,7 +16,6 @@ export const Pokedex = () => {
 
   const navigate = useNavigate();
 
-
   const onClickApagar = (id) => {
     const index = pokedex.findIndex((pokemon) => pokemon.id === id);
     const pokemon = pokedex[index];
@@ -26,9 +24,9 @@ export const Pokedex = () => {
     setPokemons((list) => [pokemon, ...list]);
   };
 
-//   return (
-//     <div>
-//       <h1>Seus Pokemons</h1>
+  return (
+    <div>
+      <h1>Seus Pokemons</h1>
 
       <ul>
         {pokedex.map((pokemon) => {
@@ -40,12 +38,12 @@ export const Pokedex = () => {
                 <ButtonGroup>
                   <Button
                     colorScheme="blue"
-                    onClick={() => goToDetalhes(navigate)}
+                    onClick={() => goToDetalhes(navigate,pokemon.name)}
                   >
                     Detalhes
                   </Button>
                   <Button
-                    colorScheme="teal"
+                    colorScheme="blue"
                     variant="outline"
                     onClick={() => onClickApagar(pokemon.id)}
                   >
