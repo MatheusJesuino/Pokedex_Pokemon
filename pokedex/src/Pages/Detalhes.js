@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import { useEffect, useState, useNavigate } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { goToDetalhes, goToPokedex, goToHomePage } from "../Coordinator/Coordinator"
 import { BASE_URL } from "../Contants/contants";
-
+import { useNavigate } from "react-router-dom";
 
 export const Detalhes = () => {
     const navigate = useNavigate()
