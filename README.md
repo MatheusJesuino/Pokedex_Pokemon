@@ -1,6 +1,6 @@
 Seja Bem-Vindo a sua Pokédex
 
-![image](https://user-images.githubusercontent.com/98991478/167326955-18d6b43e-6016-43d8-8350-c90d68adb40c.png)
+![image](https://user-images.githubusercontent.com/98991478/167328206-681d25da-dc72-4269-95dd-ce1f2f8808f7.png)
 
 Nome dos integrantes: 
 - Matheus Jesuino - https://github.com/MatheusJesuino
@@ -60,4 +60,4 @@ Isso eu sei
 Pegá-los eu tentarei
 Vai ser grande a emoção
 [Pokemooooon]
-Temos que pegar, temos que pegar
+Temos que pegar, temos que pegar.
