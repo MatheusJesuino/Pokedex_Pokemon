@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/98991478/167326907-0838b59e-bc8f-43e5-a9f7-447c50a21910.png)
+![image](https://user-images.githubusercontent.com/98991478/167326955-18d6b43e-6016-43d8-8350-c90d68adb40c.png)
 
 Nome dos integrantes: 
 - Pessoa 1
