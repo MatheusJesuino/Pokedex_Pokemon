@@ -7,13 +7,13 @@ import { extendTheme, ChakraProvider } from '@chakra-ui/react'
 
 
 
- const colors ={
-  brand:{
-    900:'red'
-  }
+const config = {
+  initialColorMode: 'light',
+  useSystemColorMode: false,
 }
-const theme = extendTheme({colors}) 
-  
+
+
+const theme = extendTheme({ config })
   
 function App() {
   return (

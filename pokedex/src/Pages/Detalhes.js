@@ -1,17 +1,13 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { goToPokedex, goToHomePage } from "../Coordinator/Coordinator"
+import { goToPokedex, goToHomePage } from "../Coordinator/Coordinator";
 import { BASE_URL } from "../Contants/contants";
 import { useNavigate, useParams } from "react-router-dom";
 import { Badge, Box, Button, ButtonGroup, Flex, Image } from "@chakra-ui/react";
 import { useContext } from "react";
 import { ContextPokemons } from "../global/GlobalContext";
-
-
-
 
 const ContainerHeader = styled.div`
 display:flex;
@@ -185,3 +181,4 @@ export const Detalhes = () => {
 }
 
 export default Detalhes
+
