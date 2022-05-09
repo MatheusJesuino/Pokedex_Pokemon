@@ -8,6 +8,8 @@ import styled from "styled-components";
 import { ContextPokemons } from "../global/GlobalContext";
 import { Pokedex } from "./Pokedex";
 import { Badge, Box, Button, ButtonGroup, Flex, Image } from "@chakra-ui/react";
+import { Headers } from "./Headers";
+
 
 const Container = styled.div `
 h1{
@@ -17,6 +19,14 @@ h1{
 }
 `
 
+
+
+const CardPokemons = styled.div`
+  Img {
+    height: 150px;
+    width: 150px;
+  }
+`;
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -32,7 +42,11 @@ export const HomePage = () => {
   };
 
   return (
+
     <Container>
+
+    <div>
+
       <h1>Lista Pokemons</h1>
       <ButtonGroup>
         <Button margin={'5'} colorScheme={"blue"} onClick={() => goToPokedex(navigate)}>
@@ -62,6 +76,7 @@ export const HomePage = () => {
                   />
                 </Box>
 
+
                 {pokemon.name}
                 <Flex>
                   <ButtonGroup>
@@ -87,6 +102,32 @@ export const HomePage = () => {
         </Flex>
       )}
     </Container>
+
+              {pokemon.name}
+              <Flex>
+                <ButtonGroup>
+                  <Button
+                    colorScheme={"blue"}
+                    size="sm"
+                    onClick={() => onClickAddPokedex(pokemon.id)}
+                  >
+                    Adicionar a Pokédex
+                  </Button>
+                  <Button
+                    colorScheme={"teal"}
+                    size="sm"
+                    onClick={() => goToDetalhes(navigate, pokemon.name)}
+                  >
+                    Ver Detalhes
+                  </Button>
+                </ButtonGroup>
+              </Flex>
+            </Box>
+          );
+        })}
+      </Flex>
+    </div>
+
   );
 };
 export default HomePage;
