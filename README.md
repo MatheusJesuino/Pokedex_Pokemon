@@ -1,6 +1,6 @@
-Seja Bem-Vindo a sua Pokédex
+Seja Bem-Vindo a sua Pokédex !!!
 
-![image](https://user-images.githubusercontent.com/98991478/167328206-681d25da-dc72-4269-95dd-ce1f2f8808f7.png)
+![image](https://user-images.githubusercontent.com/98991478/167328309-5141c8fe-c4c2-47bb-a2c8-e6a26a519183.png)
 
 Nome dos integrantes: 
 - Matheus Jesuino - https://github.com/MatheusJesuino
