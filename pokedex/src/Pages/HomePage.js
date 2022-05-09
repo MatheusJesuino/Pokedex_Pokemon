@@ -8,31 +8,16 @@ import styled from "styled-components";
 import { ContextPokemons } from "../global/GlobalContext";
 import { Pokedex } from "./Pokedex";
 import { Badge, Box, Button, ButtonGroup, Flex, Image } from "@chakra-ui/react";
-import { Headers } from "./Headers";
-
-
 const Container = styled.div `
 h1{
   text-align: center;
   color:#D69E2E;
-  
 }
 `
-
-
-
-const CardPokemons = styled.div`
-  Img {
-    height: 150px;
-    width: 150px;
-  }
-`;
-
 export const HomePage = () => {
   const navigate = useNavigate();
   const { pokemons, pokedex, setPokemons, setPokedex, loading } =
     useContext(ContextPokemons);
-
   const onClickAddPokedex = (id) => {
     const index = pokemons.findIndex((pokemon) => pokemon.id === id);
     const pokemon = pokemons[index];
@@ -40,13 +25,8 @@ export const HomePage = () => {
     setPokemons(pokemons);
     setPokedex((list) => [pokemon, ...list]);
   };
-
   return (
-
     <Container>
-
-    <div>
-
       <h1>Lista Pokemons</h1>
       <ButtonGroup>
         <Button margin={'5'} colorScheme={"blue"} onClick={() => goToPokedex(navigate)}>
@@ -75,8 +55,6 @@ export const HomePage = () => {
                     src={pokemon.sprites.other.dream_world.front_default}
                   />
                 </Box>
-
-
                 {pokemon.name}
                 <Flex>
                   <ButtonGroup>
@@ -102,32 +80,6 @@ export const HomePage = () => {
         </Flex>
       )}
     </Container>
-
-              {pokemon.name}
-              <Flex>
-                <ButtonGroup>
-                  <Button
-                    colorScheme={"blue"}
-                    size="sm"
-                    onClick={() => onClickAddPokedex(pokemon.id)}
-                  >
-                    Adicionar a Pokédex
-                  </Button>
-                  <Button
-                    colorScheme={"teal"}
-                    size="sm"
-                    onClick={() => goToDetalhes(navigate, pokemon.name)}
-                  >
-                    Ver Detalhes
-                  </Button>
-                </ButtonGroup>
-              </Flex>
-            </Box>
-          );
-        })}
-      </Flex>
-    </div>
-
   );
 };
 export default HomePage;
