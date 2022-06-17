@@ -2,7 +2,7 @@ Seja Bem-Vindo a sua Pokédex !!!
 
 ![image](https://user-images.githubusercontent.com/98991478/167328309-5141c8fe-c4c2-47bb-a2c8-e6a26a519183.png)
 
-Integrantes do Projeto: 
+Integrantes do Projeto em grupo: 
 - Matheus Jesuino - https://github.com/MatheusJesuino
 - Mauricio Paranhes - https://github.com/Meparanhos
 - Regiscléia Dias - https://github.com/regiscleia
